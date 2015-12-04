@@ -1,0 +1,37 @@
+{
+  "name": "parse-cn-idcard",
+  "version": "0.1.1",
+  "description": "解析中国身份证号码（地址，性别，生日，星座），支持 18 位和 15 位身份证",
+  "keywords": [
+    "query",
+    "parse",
+    "解析",
+    "idcard",
+    "身份证",
+    "constellation",
+    "星座"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/modood/parse-cn-idcard.git"
+  },
+  "Author": {
+    "name": "modood",
+    "email": "modood@qq.com",
+    "url": "https://github.com/modood"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "parse-id": "bin/parse-id.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "node-constellation": "0.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}
