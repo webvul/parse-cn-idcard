@@ -6,57 +6,57 @@
 
 `$ npm install --save parse-cn-idcard`
 
-or:
+or
 
 `$ npm install -g parse-cn-idcard`
 
 ## Usage
 
--   api
+### api
 
-    ```javascript
-    var parse_id = require('node-constellation');
+```javascript
+var parse_id = require('parse-cn-idcard');
 
-    var result = parse_id('110000199409181234');
-    console.log(result)
-    ```
-    ```
-    {
-        area: {
-            id: '110000',
-            name: '北京市'
-        },
-        birthday: {
-            date: '19940918',
-            constellation_cn: '处女座',
-            constellation_en: 'Virgo'
-        },
-        gender: {
-            cn: '男',
-            en: 'Male'
-        }
+var result = parse_id('110000199409181234');
+console.log(result)
+```
+```
+{
+    area: {
+        id: '110000',
+        name: '北京市'
+    },
+    birthday: {
+        date: '19940918',
+        constellation_cn: '处女座',
+        constellation_en: 'Virgo'
+    },
+    gender: {
+        cn: '男',
+        en: 'Male'
     }
-    ```
+}
+```
 
--   cli
+### cli
 
-    ```
-    Usage: parse-id [options]
+```
+Usage: parse-id [options]
 
-    Options:
+Options:
 
-      -h, --help     output usage information
-      -V, --version  output the version number
+  -h, --help     output usage information
+  -V, --version  output the version number
 
-    Usage:
+Usage:
 
-      $ parse-id [idcard number]    查询特定的身份证号码
+  $ parse-id [idcard number]    查询特定的身份证号码
 
-    Examples:
+Examples:
 
-      $ parse-id 110000200808081234
+  $ parse-id 110000200808081234
 
-    ```
+```
 
 ## Contributing
 
