@@ -2,6 +2,11 @@
 
 解析中国身份证号码（地址，性别，生日，星座），支持 18 位和 15 位身份证
 
+[![Deps](https://david-dm.org/modood/parse-cn-idcard.svg)](https://david-dm.org/modood/parse-cn-idcard) 
+[![npm](https://img.shields.io/npm/v/parse-cn-idcard.svg)](https://www.npmjs.com/package/parse-cn-idcard)
+[![npm](https://img.shields.io/npm/dt/parse-cn-idcard.svg)](https://www.npmjs.com/package/parse-cn-idcard)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/modood/parse-cn-idcard/master/LICENSE)
+
 ## Installation
 
 `$ npm install --save parse-cn-idcard`
@@ -10,6 +15,10 @@ or
 
 `$ npm install -g parse-cn-idcard`
 
+## Test
+
+`$ npm test`
+
 ## Usage
 
 ### api
@@ -17,19 +26,20 @@ or
 ```javascript
 var parse_id = require('parse-cn-idcard');
 
-var result = parse_id('110000199409181234');
-console.log(result)
+var result = parse_id('110105199410221234');
+
+console.log(result);
 ```
 ```
 {
     area: {
-        id: '110000',
-        name: '北京市'
+        id: '110105',
+        name: '北京市朝阳区'
     },
     birthday: {
-        date: '19940918',
-        constellation_cn: '处女座',
-        constellation_en: 'Virgo'
+        date: '19941022',
+        constellation_cn: '天秤座',
+        constellation_en: 'Libra'
     },
     gender: {
         cn: '男',
@@ -54,7 +64,7 @@ Usage:
 
 Examples:
 
-  $ parse-id 110000200808081234
+  $ parse-id 110105199410221234
 
 ```
 
@@ -68,5 +78,4 @@ Examples:
 
 ## License
 
-this repo is released under the [MIT
-License](http://www.opensource.org/licenses/MIT).
+this repo is released under the [MIT License](http://www.opensource.org/licenses/MIT).

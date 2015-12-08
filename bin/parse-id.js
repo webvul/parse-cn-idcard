@@ -13,7 +13,7 @@ program.on('--help', function(){
   console.log('');
   console.log('  Examples:');
   console.log('');
-  console.log('    $ parse-id 110000200808081234');
+  console.log('    $ parse-id 110105199410221234');
   console.log('');
 });
 
@@ -24,7 +24,7 @@ if(program.args.length >0 ){
     console.log('性别：' + result.gender.cn);
     console.log('星座：' + result.birthday.constellation_cn);
     console.log('生日：' + result.birthday.date);
-    console.log('归属地：' + result.area.name);
+    console.log('地区：' + result.area.name);
   };
 } else {
   program.outputHelp();

@@ -35,7 +35,7 @@ function parse_birthday (query_id_number) {
     birthday = query_id_number.substr(6, 8);
     month = query_id_number.substr(10, 2);
     date = query_id_number.substr(12,2);
-  } else if (query_id_number === 15) {
+  } else if (query_id_number.length === 15) {
     birthday = '19' + query_id_number.substr(6, 6);
     month = query_id_number.substr(8, 2);
     date = query_id_number.substr(10, 2);
@@ -52,7 +52,7 @@ function parse_gender (query_id_number) {
   var n;
   if (query_id_number.length === 18) {
     n = query_id_number.substr(16, 1);
-  } else if (query_id_number === 15) {
+  } else if (query_id_number.length === 15) {
     n = query_id_number.substr(14, 1);
   };
   if (n%2) {
@@ -78,9 +78,10 @@ function is_id_card (query_id_number)
 
 // 解析
 function parse (query_id_number) {
+  var query_id_number = String(query_id_number);
   if (!is_id_card(query_id_number)) {
-   console.log('Error: id card number not legal!');
-   process.exit()
+   console.error('Error: id card number not legal!');
+   return;
   };
 
   var result = {
